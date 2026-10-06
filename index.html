@@ -51,7 +51,7 @@
                                 <div class="text-5xl text-center mb-5 text-slate-800">
                                     {{displayArea.join(" ")}}
                                 </div>
-                                <div class="flex justify-center">
+                                <div class="flex justify-center items-center">
                                     <div class="space-y-3">
                                         <div v-for="row, i in letters" :key="i" class="flex justify-center gap-3">
                                             <button v-for="letter in row" :key="letter" @click="press(letter)" :class="['px-2 py-1 bg-slate-700 text-white font-semibold border border-slate-800 font-sans rounded-lg text-2xl hover:bg-slate-400 hover:border hover:border-white',
@@ -68,8 +68,10 @@
                                     <h1 class="font-sans text-xl font-semibold text-center text-slate-800">{{message}}
                                     </h1>
                                 </div>
-                                <button @click="resetGame"
-                                    class="px-4 py-2 bg-slate-600 fomt-sans text-lg rounded-full text-white hover:scale-110 hover:duration-300 cursor-pointer">Restart</button>
+                                <div class="flex justify-center items-center my-5">
+                                    <button @click="resetGame"
+                                        class="px-4 py-2 bg-slate-600 fomt-sans text-lg rounded-full text-white hover:scale-110 hover:duration-300 cursor-pointer">Restart</button>
+                                </div>
                             </div>
                         </div>
                     </div>
