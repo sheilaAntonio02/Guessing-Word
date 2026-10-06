@@ -12,7 +12,7 @@
 <body>
     <div id="app">
         <div
-            class="flex justify-center items-center w-full h-screen bg-[url('https://i.pinimg.com/1200x/d2/1f/93/d21f93e06d74ea568e7c7d13ff68baf4.jpg')] bg-cover bg-center hidden lg:block">
+            class="flex justify-center items-center w-full h-screen bg-[url('https://i.pinimg.com/1200x/d2/1f/93/d21f93e06d74ea568e7c7d13ff68baf4.jpg')] bg-cover bg-center hidden md:block lg:block">
             <div class="min-w-2xl">
                 <div class="flex flex-col justify-center items-center gap-10">
                     <h1 class="font-sans text-5xl font-black py-5">Guess the Word</h1>
@@ -21,7 +21,7 @@
                     </div>
                     <div class="space-y-3">
                         <div v-for="row, i in letters" :key="i" class="flex justify-center gap-3">
-                            <button v-for="letter in row" :key="letter" @click="press(letter)" :class="['px-7 py-5 bg-slate-700 text-white font-semibold border border-slate-800 font-sans rounded-lg text-2xl hover:bg-slate-400 hover:border hover:border-white',
+                            <button v-for="letter in row" :key="letter" @click="press(letter)" :class="['px-5 py-3 bg-slate-700 text-white font-semibold border border-slate-800 font-sans rounded-lg text-2xl hover:bg-slate-400 hover:border hover:border-white',
                          usedLetters.includes(letter)
                          ?'bg-gray-400 cursor-not-allowed opacity-50'
                          :'bg-blue-300 cursor-pointer'
@@ -40,15 +40,15 @@
         </div>
 
         <!-- mobile -->
-        <div class=" block lg:hidden">
+        <div class=" block md:hidden lg:hidden">
             <div class="">
                 <div class="flex justify-center items-center h-screen">
                     <div
                         class="h-screen bg-[url('https://i.pinimg.com/1200x/d2/1f/93/d21f93e06d74ea568e7c7d13ff68baf4.jpg')] bg-cover bg-center">
-                        <div class="">
+                        <div class="flex justify-center items-center">
                             <div class="">
                                 <h1 class="font-sans text-5xl font-black py-5 text-center">Guess the Word</h1>
-                                <div class="text-5xl text-center mb-5 text-slate-800">
+                                <div class="text-2xl text-center mb-5 text-slate-800">
                                     {{displayArea.join(" ")}}
                                 </div>
                                 <div class="flex justify-center items-center">
